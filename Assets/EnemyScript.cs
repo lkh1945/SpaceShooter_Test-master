@@ -4,9 +4,17 @@ public class EnemyScript : MonoBehaviour
 {
     public GameObject effect;
     public GameObject gameManager;
+    public float speed;
+
+    public int hp;
+    private void Awake()
+    {
+        GameManager gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
+        gameManager.enemyCount++;
+    }
     private void Update()
     {
-        transform.Translate(0, -0.01f, 0);
+        transform.Translate(0, -speed * Time.deltaTime, 0);
     }
     private void OnDestroyEffect()
     {
@@ -32,8 +40,12 @@ public class EnemyScript : MonoBehaviour
             hit();
             plusScore();
             Destroy(collision.gameObject);
-            OnDestroyEffect();
-            Destroy(gameObject);
+            hp -= collision.GetComponent<BulletScript>().power;
+            if(hp <= 0)
+            {
+                OnDestroyEffect();
+                Destroy(gameObject);
+            }
         }
         if (collision.tag == "Player")
         {

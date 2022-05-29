@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class WeaponLaserScript : MonoBehaviour
 {
+
     public GameObject missile;
     private void Update()
     {

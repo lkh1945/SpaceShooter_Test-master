@@ -7,6 +7,8 @@ public class GameManager : MonoBehaviour
 {
     public float score, shootChance, hit;
     public float sum;
+
+    public int enemyCount, bossCount;
     public Text scoreText, hitText;
     void Start()
     {

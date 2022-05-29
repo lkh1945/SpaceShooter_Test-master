@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6334752948644644733}
   - component: {fileID: 6334752948644644729}
   - component: {fileID: 103573713256944382}
+  - component: {fileID: -8367073902236597977}
   m_Layer: 0
   m_Name: Machine Gun
   m_TagString: Bullet
@@ -221,3 +222,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9b4f4713739c044584aebba592d4ae5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-8367073902236597977
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6334752948644644734}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29bfab1b18760ac4ea5db65415ff096c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxY: 10
+  minY: -10
