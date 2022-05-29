@@ -23,6 +23,7 @@ public class playerMove : MonoBehaviour
         if(pos.y < minY) pos.y = minY;
         if(pos.y > maxY) pos.y = maxY;
         
+        if(Input.GetKeyDown(KeyCode.Alpha1)) FindObjectOfType<scoreText>().AddScore(100);
         transform.position = pos;
     }
     private void OnDestroyEffect()

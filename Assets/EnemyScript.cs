@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class EnemyScript : MonoBehaviour
 {
@@ -30,6 +28,7 @@ public class EnemyScript : MonoBehaviour
 
         if (collision.CompareTag("Bullet"))
         {
+            FindObjectOfType<scoreText>().AddScore(100);
             hit();
             plusScore();
             Destroy(collision.gameObject);

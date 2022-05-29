@@ -10,6 +10,8 @@ public class GameManager : MonoBehaviour
     public Text scoreText, hitText;
     void Start()
     {
+        scoreText = scoreText.GetComponent<Text>();
+        hitText = hitText.GetComponent<Text>();
         score = 0;
         shootChance = 0;
         hit = 0;
